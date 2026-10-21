@@ -95,12 +95,6 @@
       border-bottom: 1px solid rgba(196, 168, 255, 0.12);
     }
 
-    @media (min-width: 1280px) {
-      #mobileMenuBtn {
-        display: none;
-      }
-    }
-
     .glass-card {
       background: rgba(45, 24, 89, 0.45);
       backdrop-filter: blur(14px);
@@ -149,6 +143,23 @@
     }
     .whatsapp-radar {
       animation: radar-pulse 2.2s infinite;
+    }
+    @keyframes call-radar-pulse {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(196, 168, 255, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(196, 168, 255, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(196, 168, 255, 0);
+      }
+    }
+    .call-radar {
+      animation: call-radar-pulse 2.2s infinite;
     }
 
     button:not(.uiverse-card button), .btn-glow {
@@ -342,7 +353,7 @@
 <body class="bg-brand-darkest text-brand-cream relative selection:bg-brand-accent selection:text-brand-darkest">
 
   <div class="fixed bottom-6 left-6 z-50 flex items-center gap-3">
-    <a href="https://wa.me/201557512789?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
+    <a href="https://wa.me/201007812220?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
        target="_blank" 
        rel="noopener noreferrer"
        class="hidden md:flex items-center gap-2 bg-brand-surface/90 backdrop-blur-md border border-brand-accent/30 text-white text-xs py-2 px-3.5 rounded-full shadow-lg hover:border-brand-accent transition-all group">
@@ -351,12 +362,18 @@
       <i class="fa-solid fa-arrow-left text-[10px] text-brand-accent transition-transform group-hover:-translate-x-1"></i>
     </a>
     
-    <a href="https://wa.me/201557512789?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
+    <a href="https://wa.me/201007812220?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
        target="_blank" 
        rel="noopener noreferrer"
        aria-label="تواصل معنا عبر واتساب"
        class="relative flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 whatsapp-radar">
       <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+    <a href="tel:+201041000140"
+        aria-label="اتصل بنا مباشرة"
+        title="اتصال مباشر"
+        class="relative flex items-center justify-center w-14 h-14 bg-brand-lightPurple text-brand-accentLight rounded-full border border-brand-accent/40 shadow-2xl hover:bg-brand-accent hover:text-brand-darkest hover:scale-110 transition-all duration-300 call-radar">
+       <i class="fa-solid fa-phone text-xl"></i>
     </a>
   </div>
 
@@ -441,7 +458,7 @@
         </nav>
 
         <div class="flex items-center gap-3 shrink-0">
-          <a href="https://wa.me/201557512789?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
+          <a href="https://wa.me/201007812220?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
              target="_blank"
              class="btn-glow hidden sm:inline-flex gap-2 font-bold text-xs sm:text-sm whitespace-nowrap">
             <span>احجز جلسة تعارف</span>
@@ -465,7 +482,7 @@
       <a href="#sectors" class="block px-3 py-2 rounded-lg text-sm text-white/90 hover:bg-brand-surface hover:text-brand-accent">القطاعات التي نخدمها</a>
       <a href="#packages" class="block px-3 py-2 rounded-lg text-sm text-white/90 hover:bg-brand-surface hover:text-brand-accent">باقاتنا</a>
       <div class="pt-2">
-        <a href="https://wa.me/201557512789?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
+        <a href="https://wa.me/201007812220?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
            target="_blank" 
            class="btn-glow w-full text-center font-bold text-sm block">
           احجز جلسة تعارف الآن
@@ -740,7 +757,7 @@
             </p>
           </div>
           <div class="flex-shrink-0">
-            <a href="https://wa.me/201557512789?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
+            <a href="https://wa.me/201007812220?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services" 
                target="_blank"
                class="btn-glow inline-flex items-center gap-2 font-bold text-xs sm:text-sm">
               <span>تحدث مع القيادة</span>
@@ -1258,7 +1275,7 @@
               <span class="list_text">تقرير شهري بالأداء والتفاعل</span>
             </div>
           </div>
-          <a href="https://wa.me/201557512789?text=Hello,%20I%20am%20interested%20in%20the%20Starter%20Package" target="_blank" class="button mt-auto">طلب استشارة لباقة البداية</a>
+          <a href="https://wa.me/201007812220?text=Hello,%20I%20am%20interested%20in%20the%20Starter%20Package" target="_blank" class="button mt-auto">طلب استشارة لباقة البداية</a>
         </div>
 
         <div class="uiverse-card scale-105 z-10 border-2 border-brand-accent">
@@ -1298,7 +1315,7 @@
               <span class="list_text">تقرير أداء كل أسبوعين وتحديث الخطط</span>
             </div>
           </div>
-          <a href="https://wa.me/201557512789?text=Hello,%20I%20am%20interested%20in%20the%20Growth%20Package" target="_blank" class="button mt-auto">ابدأ مع باقة النمو الآن</a>
+          <a href="https://wa.me/201007812220?text=Hello,%20I%20am%20interested%20in%20the%20Growth%20Package" target="_blank" class="button mt-auto">ابدأ مع باقة النمو الآن</a>
         </div>
 
         <div class="uiverse-card">
@@ -1335,7 +1352,7 @@
               <span class="list_text">أكاونت مانجر مخصص وتقارير أسبوعية</span>
             </div>
           </div>
-          <a href="https://wa.me/201557512789?text=Hello,%20I%20am%20interested%20in%20the%20Premium%20Package" target="_blank" class="button mt-auto">طلب استشارة لباقة بريميوم</a>
+          <a href="https://wa.me/201007812220?text=Hello,%20I%20am%20interested%20in%20the%20Premium%20Package" target="_blank" class="button mt-auto">طلب استشارة لباقة بريميوم</a>
         </div>
 
       </div>
@@ -1447,7 +1464,8 @@
             <i class="fa-solid fa-clock text-brand-accent"></i> رد فوري خلال ساعات العمل
           </span>
           <span class="flex items-center gap-1.5">
-            <i class="fa-solid fa-phone text-brand-accent"></i> هاتف مباشر: 01557512789
+            <i class="fa-solid fa-phone text-brand-accent"></i>
+            <a href="tel:+201007812220" class="hover:text-white transition-colors">هاتف مباشر: 01007812220</a>
           </span>
         </div>
 
@@ -1509,7 +1527,11 @@
           <div class="space-y-3 text-xs text-white/75">
             <div class="flex items-center gap-3">
               <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
-              <a href="https://wa.me/201557512789" class="hover:text-white dir-ltr font-mono">+20 155 751 2789</a>
+              <a href="https://wa.me/201007812220" class="hover:text-white dir-ltr font-mono">+20 100 781 2220</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-brand-accent text-sm"></i>
+              <a href="tel:+201007812220" class="hover:text-white dir-ltr font-mono">+20 100 781 2220</a>
             </div>
             <div class="flex items-center gap-3">
               <i class="fa-brands fa-facebook text-brand-accent text-sm"></i>
@@ -1620,7 +1642,7 @@
 
     function respondToQuery(query) {
       const lower = query.toLowerCase();
-      let reply = "شكراً لتواصلك معنا! هاتفنا متاح دائماً على 01557512789 أو يمكنك حجز جلسة تعارف مباشرة عبر النموذج أسفل الصفحة.";
+      let reply = "شكراً لتواصلك معنا! هاتفنا متاح دائماً على 01007812220 أو يمكنك حجز جلسة تعارف مباشرة عبر النموذج أسفل الصفحة.";
 
       if (lower.includes('باق') || lower.includes('سعر') || lower.includes('اسعار')) {
         reply = "لدينا 3 باقات رئيسية: باقة البداية، باقة النمو، وباقة بريميوم. يمكنك مراجعة قسم الباقات أو الضغط على زر الواتساب للتفاصيل الكاملة.";
@@ -1647,7 +1669,7 @@
                       `🎯 الخدمة المهتم بها: ${encodeURIComponent(service)}%0A%0A` +
                       `يرجى التنسيق لتحديد موعد الجلسة.`;
 
-      const whatsappUrl = `https://wa.me/201557512789?text=${message}`;
+      const whatsappUrl = `https://wa.me/201007812220?text=${message}`;
       window.open(whatsappUrl, '_blank');
     }
   </script>
