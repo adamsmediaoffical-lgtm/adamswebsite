@@ -348,6 +348,12 @@
     .uiverse-card .button:hover {
       opacity: 0.9;
     }
+
+    @media (max-width: 640px) {
+      #chatInput {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body class="bg-brand-darkest text-brand-cream relative selection:bg-brand-accent selection:text-brand-darkest">
@@ -450,7 +456,7 @@
         <nav class="hidden xl:flex items-center gap-6 2xl:gap-8 text-xs 2xl:text-sm font-medium text-white/80 whitespace-nowrap mx-auto">
           <a href="index.html" class="hover:text-brand-accent transition-colors">الرئيسية</a>
           <a href="#about" class="hover:text-brand-accent transition-colors">من نحن</a>
-          <a href="#ecosystem" class="hover:text-brand-accent transition-colors">المجموعة</a>
+
           <a href="#services" class="hover:text-brand-accent transition-colors">خدماتنا</a>
           <a href="#framework" class="hover:text-brand-accent transition-colors">طريقتنا في المحتوى</a>
           <a href="#sectors" class="hover:text-brand-accent transition-colors">القطاعات</a>
