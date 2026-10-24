@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>adam's media™ | Creative & Digital Solutions</title>
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,8 +27,10 @@
             }
           },
           fontFamily: {
-            expoArabic: ['Expo Arabic', 'Cairo', 'sans-serif'],
-            cairo: ['Cairo', 'sans-serif']
+            sans: ['Expo Arabic', 'sans-serif'],
+            expoArabic: ['Expo Arabic', 'sans-serif'],
+            cairo: ['Expo Arabic', 'sans-serif'],
+            mono: ['Expo Arabic', 'sans-serif']
           },
           animation: {
             'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -55,8 +53,44 @@
   </script>
 
   <style>
+    @font-face {
+      font-family: 'Expo Arabic';
+      src: url('./alfont_com_AlFont_com_ExpoArabic-Light-1.ttf') format('truetype');
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Expo Arabic';
+      src: url('./alfont_com_AlFont_com_ExpoArabic-Book-1.ttf') format('truetype');
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Expo Arabic';
+      src: url('./alfont_com_AlFont_com_ExpoArabic-Medium.ttf') format('truetype');
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Expo Arabic';
+      src: url('./alfont_com_AlFont_com_ExpoArabic-SemiBold-1.ttf') format('truetype');
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Expo Arabic';
+      src: url('./alfont_com_AlFont_com_ExpoArabic-Bold.otf') format('opentype');
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+    }
+
     body {
-      font-family: 'Expo Arabic', 'Cairo', sans-serif;
+      font-family: 'Expo Arabic', sans-serif;
       background-color: #140A28;
       color: #FAF7FD;
       overflow-x: hidden;
@@ -458,7 +492,7 @@
           <a href="#about" class="hover:text-brand-accent transition-colors">من نحن</a>
 
           <a href="#services" class="hover:text-brand-accent transition-colors">خدماتنا</a>
-          <a href="#framework" class="hover:text-brand-accent transition-colors">طريقتنا في المحتوى</a>
+
           <a href="#sectors" class="hover:text-brand-accent transition-colors">القطاعات</a>
           <a href="#packages" class="hover:text-brand-accent transition-colors">باقاتنا</a>
         </nav>
@@ -482,9 +516,7 @@
     <div id="mobileMenu" class="hidden xl:hidden border-t border-brand-accent/10 bg-brand-dark/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-2">
       <a href="index.html" class="block px-3 py-2 rounded-lg text-sm text-white/90 hover:bg-brand-surface hover:text-brand-accent">الرئيسية</a>
       <a href="#about" class="block px-3 py-2 rounded-lg text-sm text-white/90 hover:bg-brand-surface hover:text-brand-accent">من نحن</a>
-      <a href="#ecosystem" class="block px-3 py-2 rounded-lg text-sm text-white/90 hover:bg-brand-surface hover:text-brand-accent">المجموعة المتكاملة</a>
       <a href="#services" class="block px-3 py-2 rounded-lg text-sm text-white/90 hover:bg-brand-surface hover:text-brand-accent">خدماتنا</a>
-      <a href="#framework" class="block px-3 py-2 rounded-lg text-sm text-white/90 hover:bg-brand-surface hover:text-brand-accent">طريقتنا في المحتوى</a>
       <a href="#sectors" class="block px-3 py-2 rounded-lg text-sm text-white/90 hover:bg-brand-surface hover:text-brand-accent">القطاعات التي نخدمها</a>
       <a href="#packages" class="block px-3 py-2 rounded-lg text-sm text-white/90 hover:bg-brand-surface hover:text-brand-accent">باقاتنا</a>
       <div class="pt-2">
@@ -613,11 +645,6 @@
 
       <div class="rounded-3xl p-8 md:p-10 bg-gradient-to-br from-brand-card/90 to-brand-surface/90 border border-brand-accent/30 shadow-xl mb-16">
         <div class="flex flex-col md:flex-row items-center gap-8">
-          <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-tr from-brand-accent via-brand-lightPurple to-white p-1 flex-shrink-0 shadow-lg">
-            <div class="w-full h-full rounded-[22px] bg-brand-darkest flex items-center justify-center text-center">
-              <span class="text-3xl font-black text-brand-accent font-expoArabic"></span>
-            </div>
-          </div>
           <div class="flex-1 text-center md:text-right">
             <div class="inline-block text-xs font-bold text-brand-accent bg-brand-surface px-3 py-1 rounded-md mb-2">
               القيادة التنفيذية
@@ -632,78 +659,7 @@
         </div>
       </div>
 
-      <div>
-        <div class="text-center mb-10">
-          <h3 class="text-2xl sm:text-3xl font-black text-white font-expoArabic">
-            ستة أقسام متخصصة تحت سقف واحد
-          </h3>
-          <p class="text-white/60 text-sm mt-2">كل قسم يقوده متخصصون يضمنون احترافية كل تفصيلة في براندك</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="glass-card rounded-2xl p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent">
-                <i class="fa-solid fa-chess-knight"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">الاستراتيجية والحسابات</h4>
-            </div>
-            <p class="text-xs text-white/70">استراتيجي براند، مخطط ميديا، وأكاونت مانجر مخصص لمتابعة كل صغيرة وكبيرة.</p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent">
-                <i class="fa-solid fa-bezier-curve"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">الإبداع والتصميم</h4>
-            </div>
-            <p class="text-xs text-white/70">مدير فني، مصممو جرافيك مبدعون، موشن ديزاينرز، ومصممو واجهات UI/UX حديثة.</p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent">
-                <i class="fa-solid fa-pen-nib"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">المحتوى والكتابة</h4>
-            </div>
-            <p class="text-xs text-white/70">كوبي رايترز متخصصون، كتاب سكريبتات إعلانية، واستراتيجي محتوى يفهم سيكولوجية العميل.</p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent">
-                <i class="fa-solid fa-video"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">الإنتاج الإعلامي</h4>
-            </div>
-            <p class="text-xs text-white/70">مصور فوتوغرافي، مصور سينمائي، مخرج ومونتير محترف، ومهندس اضاءة ذو خبرة عالية.</p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent">
-                <i class="fa-solid fa-share-nodes"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">السوشيال ميديا</h4>
-            </div>
-            <p class="text-xs text-white/70">سوشيال ميديا مانجر، كوميونيتي مانجر للتفاعل السريع والرد، وصناع محتوى عصريين.</p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent">
-                <i class="fa-solid fa-chart-line"></i>
-              </div>
-              <h4 class="text-base font-bold text-white">الديجيتال والإعلانات</h4>
-            </div>
-            <p class="text-xs text-white/70">ميديا باير متخصص في الحملات الممولة، أخصائي SEO، ومحلل بيانات رقمية لتحسين العائد.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
+      
   </section>
 
   <section id="services" class="py-24 bg-brand-dark/40 border-t border-brand-accent/10 relative">
@@ -920,114 +876,8 @@
     </div>
   </section>
 
-  <section id="framework" class="py-24 bg-brand-dark/50 border-y border-brand-accent/10 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold text-brand-accent bg-brand-surface px-3.5 py-1.5 rounded-full border border-brand-accent/20">
-          03 | طريقتنا في المحتوى
-        </span>
-        <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 font-expoArabic">
-          "كل بوست ليه هدف، وكل هدف ليه رقم."
-        </h2>
-        <p class="text-white/70 text-sm sm:text-base mt-3">
-          مبنعلمش بوستات وخلاص؛ بنبني منظومة محتوى متوازنة بـ 5 محاور تقنع العميل وتدفعه للشراء
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-16">
-        <div class="glass-card rounded-2xl p-5 text-center border-t-4 border-t-brand-accent">
-          <div class="text-3xl font-black text-brand-accent mb-2 font-expoArabic">25%</div>
-          <div class="font-bold text-white text-sm mb-1">المنتج والخدمة</div>
-          <p class="text-[11px] text-white/60">نورّي اللي بتبيعه بأحسن وأجمل شكل يفتح النفس للشراء.</p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-5 text-center border-t-4 border-t-brand-accent">
-          <div class="text-3xl font-black text-brand-accent mb-2 font-expoArabic">25%</div>
-          <div class="font-bold text-white text-sm mb-1">قيمة ومعلومة</div>
-          <p class="text-[11px] text-white/60">محتوى مفيد ونصائح حقيقية بتخلي الناس تتابعك وتثق فيك.</p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-5 text-center border-t-4 border-t-brand-glow">
-          <div class="text-3xl font-black text-brand-glow mb-2 font-expoArabic">20%</div>
-          <div class="font-bold text-white text-sm mb-1">ثقة وآراء</div>
-          <p class="text-[11px] text-white/60">آراء عملاء حقيقيين، تقييمات، وتجارب ناجحة تكسر التردد.</p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-5 text-center border-t-4 border-t-brand-accentLight">
-          <div class="text-3xl font-black text-brand-accentLight mb-2 font-expoArabic">15%</div>
-          <div class="font-bold text-white text-sm mb-1">كواليس البراند</div>
-          <p class="text-[11px] text-white/60">الناس والمكان والجهد ورا الشغل؛ إنسانية البراند بتخلق انتماء.</p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-5 text-center border-t-4 border-t-brand-accentLight">
-          <div class="text-3xl font-black text-brand-accentLight mb-2 font-expoArabic">15%</div>
-          <div class="font-bold text-white text-sm mb-1">تريند وتفاعل</div>
-          <p class="text-[11px] text-white/60">مواكبة اللي الناس بتتكلم فيه بلغة البراند لكسب وصول مجاني.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="rounded-3xl p-8 md:p-12 bg-gradient-to-b from-brand-card/70 to-brand-surface/70 border border-brand-accent/25">
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <span class="text-xs font-bold text-brand-accent bg-brand-card px-3 py-1 rounded-md">شفافية تامة</span>
-        <h3 class="text-2xl sm:text-3xl font-black text-white mt-2 font-expoArabic">إزاي بنقيس النجاح معاك؟</h3>
-        <p class="text-white/60 text-xs sm:text-sm mt-1">تقرير شهري مفصل بالأرقام واجتماع مراجعة دوري لمناقشة المؤشرات الستة:</p>
-      </div>
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-        <div class="glass-card p-5 rounded-2xl text-center">
-          <div class="w-10 h-10 mx-auto rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent mb-3">
-            <i class="fa-solid fa-eye"></i>
-          </div>
-          <div class="font-bold text-white text-sm mb-1">الوصول</div>
-          <p class="text-[11px] text-white/60">عدد الأشخاص اللي شافوا براندك</p>
-        </div>
-
-        <div class="glass-card p-5 rounded-2xl text-center">
-          <div class="w-10 h-10 mx-auto rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent mb-3">
-            <i class="fa-solid fa-heart"></i>
-          </div>
-          <div class="font-bold text-white text-sm mb-1">التفاعل</div>
-          <p class="text-[11px] text-white/60">لايكات، كومنتات، حفظ ومشاركات</p>
-        </div>
-
-        <div class="glass-card p-5 rounded-2xl text-center">
-          <div class="w-10 h-10 mx-auto rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent mb-3">
-            <i class="fa-solid fa-user-plus"></i>
-          </div>
-          <div class="font-bold text-white text-sm mb-1">نمو المتابعين</div>
-          <p class="text-[11px] text-white/60">جمهور حقيقي ومهتم بالمجال</p>
-        </div>
-
-        <div class="glass-card p-5 rounded-2xl text-center">
-          <div class="w-10 h-10 mx-auto rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent mb-3">
-            <i class="fa-solid fa-comments"></i>
-          </div>
-          <div class="font-bold text-white text-sm mb-1">الرسائل والعملاء</div>
-          <p class="text-[11px] text-white/60">استفسارات وطلبات شراء فعلية</p>
-        </div>
-
-        <div class="glass-card p-5 rounded-2xl text-center">
-          <div class="w-10 h-10 mx-auto rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent mb-3">
-            <i class="fa-solid fa-coins"></i>
-          </div>
-          <div class="font-bold text-white text-sm mb-1">تكلفة العميل (CAC)</div>
-          <p class="text-[11px] text-white/60">كل عميل كلف كام من الإعلانات</p>
-        </div>
-
-        <div class="glass-card p-5 rounded-2xl text-center">
-          <div class="w-10 h-10 mx-auto rounded-xl bg-brand-surface flex items-center justify-center text-brand-accent mb-3">
-            <i class="fa-solid fa-chart-pie"></i>
-          </div>
-          <div class="font-bold text-white text-sm mb-1">المبيعات</div>
-          <p class="text-[11px] text-white/60">أثر المحتوى والإعلانات على البيع</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  
+  
 
   <section id="packages" class="py-24 bg-brand-dark/40 border-t border-brand-accent/10 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1355,11 +1205,7 @@
           جميع الحقوق محفوظة &copy; <span id="year">2026</span> adam's media™ - part of adam's agency Group
         </div>
         <div class="flex items-center gap-4">
-          <span>شغل بجودة عالية</span>
-          <span>•</span>
-          <span>مواعيد واضحة</span>
-          <span>•</span>
-          <span>تقارير بالأرقام</span>
+          
         </div>
       </div>
 
