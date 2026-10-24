@@ -160,6 +160,82 @@
       box-shadow: 0 16px 36px -10px rgba(157, 108, 255, 0.22);
     }
 
+    #about .about-card {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      align-items: center;
+      min-height: 250px;
+      padding: 2rem;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #1c0f38;
+      box-shadow: 12px 12px 30px rgba(10, 4, 24, 0.45), -8px -8px 28px rgba(74, 40, 142, 0.2);
+    }
+    #about .about-card-bg {
+      position: absolute;
+      z-index: 1;
+      inset: 5px;
+      border: 1px solid rgba(234, 221, 254, 0.2);
+      border-radius: 10px;
+      outline: 1px solid rgba(234, 221, 254, 0.12);
+      background: rgba(36, 19, 72, 0.78);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+    #about .about-card-blob {
+      position: absolute;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4a288e 0%, #9d6cff 55%, #c4a8ff 100%);
+      opacity: 0.9;
+      filter: blur(18px);
+      animation: about-blob-bounce 5s infinite ease;
+    }
+    #about .about-card-content {
+      position: relative;
+      z-index: 2;
+    }
+    @keyframes about-blob-bounce {
+      0%, 100% { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
+      25% { transform: translate(-100%, -100%) translate3d(100%, 0, 0); }
+      50% { transform: translate(-100%, -100%) translate3d(100%, 100%, 0); }
+      75% { transform: translate(-100%, -100%) translate3d(0, 100%, 0); }
+    }
+
+    #services .package,
+    #process .package {
+      display: flex;
+      width: 100%;
+      min-height: 100%;
+      padding: 2px;
+      background-image: linear-gradient(163deg, #ff00ff 0%, #3700ff 100%);
+      border-radius: 20px;
+      transition: box-shadow 0.25s cubic-bezier(0, 0, 0, 1);
+    }
+    #services .package:hover,
+    #process .package:hover {
+      box-shadow: 0 0 30px 1px rgba(204, 0, 255, 0.3);
+    }
+    #services .package2,
+    #process .package2 {
+      width: 100%;
+      min-height: 254px;
+      padding: 2rem;
+      background-color: #1d1724;
+      border-radius: 18px;
+      transition: transform 0.25s cubic-bezier(0, 0, 0, 1), border-radius 0.25s cubic-bezier(0, 0, 0, 1);
+    }
+    #services .package:hover .package2,
+    #process .package:hover .package2 {
+      transform: scale(0.98);
+      border-radius: 18px;
+    }
+
     .ambient-glow-1 {
       position: absolute;
       width: 550px;
@@ -628,34 +704,46 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-        <div class="glass-card rounded-3xl p-8 relative">
-          <div class="w-12 h-12 rounded-xl bg-brand-accent/20 text-brand-accent flex items-center justify-center text-xl mb-6">
-            <i class="fa-solid fa-bullseye"></i>
+        <div class="about-card">
+          <div class="about-card-blob"></div>
+          <div class="about-card-bg"></div>
+          <div class="about-card-content">
+            <div class="w-12 h-12 rounded-xl bg-brand-accent/20 text-brand-accent flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">رسالتنا</h3>
+            <p class="text-white/75 text-sm leading-relaxed">
+              مساعدة البراندات تبني حضور قوي أونلاين بمحتوى بيتشاف، وتصوير بيبيع، وإعلانات بتجيب عملاء حقيقيين وتخلق تأثيراً مباشراً.
+            </p>
           </div>
-          <h3 class="text-xl font-bold text-white mb-3">رسالتنا</h3>
-          <p class="text-white/75 text-sm leading-relaxed">
-            مساعدة البراندات تبني حضور قوي أونلاين بمحتوى بيتشاف، وتصوير بيبيع، وإعلانات بتجيب عملاء حقيقيين وتخلق تأثيراً مباشراً.
-          </p>
         </div>
 
-        <div class="glass-card rounded-3xl p-8 relative">
-          <div class="w-12 h-12 rounded-xl bg-brand-accent/20 text-brand-accent flex items-center justify-center text-xl mb-6">
-            <i class="fa-solid fa-compass"></i>
+        <div class="about-card">
+          <div class="about-card-blob"></div>
+          <div class="about-card-bg"></div>
+          <div class="about-card-content">
+            <div class="w-12 h-12 rounded-xl bg-brand-accent/20 text-brand-accent flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">رؤيتنا</h3>
+            <p class="text-white/75 text-sm leading-relaxed">
+              نكون الشريك الإبداعي والرقمي الأول للبراندات في الدلتا. ولأننا جزء من مجموعة في السوق من 2009، براندك بياخد طاقة فريق جديد ومعاها ثقة وتجربة عميقة.
+            </p>
           </div>
-          <h3 class="text-xl font-bold text-white mb-3">رؤيتنا</h3>
-          <p class="text-white/75 text-sm leading-relaxed">
-            نكون الشريك الإبداعي والرقمي الأول للبراندات في الدلتا. ولأننا جزء من مجموعة في السوق من 2009، براندك بياخد طاقة فريق جديد ومعاها ثقة وتجربة عميقة.
-          </p>
         </div>
 
-        <div class="glass-card rounded-3xl p-8 relative">
-          <div class="w-12 h-12 rounded-xl bg-brand-accent/20 text-brand-accent flex items-center justify-center text-xl mb-6">
-            <i class="fa-solid fa-handshake"></i>
+        <div class="about-card">
+          <div class="about-card-blob"></div>
+          <div class="about-card-bg"></div>
+          <div class="about-card-content">
+            <div class="w-12 h-12 rounded-xl bg-brand-accent/20 text-brand-accent flex items-center justify-center text-xl mb-6">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">وعدنا</h3>
+            <p class="text-white/75 text-sm leading-relaxed">
+              شغل بجودة عالية، مواعيد تسليم واضحة وصارمة، وتقارير أداء دورية بالأرقام والنتائج الفعلية.
+            </p>
           </div>
-          <h3 class="text-xl font-bold text-white mb-3">وعدنا</h3>
-          <p class="text-white/75 text-sm leading-relaxed">
-            شغل بجودة عالية، مواعيد تسليم واضحة وصارمة، وتقارير أداء دورية بالأرقام والنتائج الفعلية.
-          </p>
         </div>
       </div>
 
@@ -680,7 +768,8 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <div class="glass-card rounded-3xl p-8 group">
+        <div class="package">
+          <div class="package2 group">
           <div class="w-14 h-14 rounded-2xl bg-brand-surface border border-brand-accent/30 text-brand-accent flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-hashtag"></i>
           </div>
@@ -692,9 +781,11 @@
             <span>حضور يومي وتفاعل مستمر</span>
             <i class="fa-solid fa-angle-left"></i>
           </div>
+          </div>
         </div>
 
-        <div class="glass-card rounded-3xl p-8 group">
+        <div class="package">
+          <div class="package2 group">
           <div class="w-14 h-14 rounded-2xl bg-brand-surface border border-brand-accent/30 text-brand-accent flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-feather"></i>
           </div>
@@ -706,9 +797,11 @@
             <span>كلام بيخاطب قلب وعقل العميل</span>
             <i class="fa-solid fa-angle-left"></i>
           </div>
+          </div>
         </div>
 
-        <div class="glass-card rounded-3xl p-8 group">
+        <div class="package">
+          <div class="package2 group">
           <div class="w-14 h-14 rounded-2xl bg-brand-surface border border-brand-accent/30 text-brand-accent flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-camera-retro"></i>
           </div>
@@ -720,9 +813,11 @@
             <span>كاميرات وسينماتوجرافي احترافي</span>
             <i class="fa-solid fa-angle-left"></i>
           </div>
+          </div>
         </div>
 
-        <div class="glass-card rounded-3xl p-8 group">
+        <div class="package">
+          <div class="package2 group">
           <div class="w-14 h-14 rounded-2xl bg-brand-surface border border-brand-accent/30 text-brand-accent flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-palette"></i>
           </div>
@@ -734,9 +829,11 @@
             <span>طابع بصري ثابت لا يُنسى</span>
             <i class="fa-solid fa-angle-left"></i>
           </div>
+          </div>
         </div>
 
-        <div class="glass-card rounded-3xl p-8 group">
+        <div class="package">
+          <div class="package2 group">
           <div class="w-14 h-14 rounded-2xl bg-brand-surface border border-brand-accent/30 text-brand-accent flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-bullhorn"></i>
           </div>
@@ -748,9 +845,11 @@
             <span>أعلى عائد على كل جنيه يُصرف</span>
             <i class="fa-solid fa-angle-left"></i>
           </div>
+          </div>
         </div>
 
-        <div class="glass-card rounded-3xl p-8 group">
+        <div class="package">
+          <div class="package2 group">
           <div class="w-14 h-14 rounded-2xl bg-brand-surface border border-brand-accent/30 text-brand-accent flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-globe"></i>
           </div>
@@ -761,6 +860,7 @@
           <div class="text-xs text-brand-accent font-semibold flex items-center gap-1.5">
             <span>تجربة مستخدم سريعة ومتجاوبة</span>
             <i class="fa-solid fa-angle-left"></i>
+          </div>
           </div>
         </div>
       </div>
@@ -1022,7 +1122,7 @@
     </div>
   </section>
 
-  <section class="py-20 relative">
+  <section id="process" class="py-20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -1038,28 +1138,34 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="glass-card rounded-3xl p-8 relative">
-          <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">01</div>
-          <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نتقابل</h3>
-          <p class="text-white/75 text-sm leading-relaxed">
-            جلسة تعارف (أونلاين أو في مقرنا) نسمع فيها عن البراند بتاعك، أهدافك البيعية، والتحديات اللي قدامك في السوق.
-          </p>
+        <div class="package">
+          <div class="package2 relative">
+            <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">01</div>
+            <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نتقابل</h3>
+            <p class="text-white/75 text-sm leading-relaxed">
+              جلسة تعارف (أونلاين أو في مقرنا) نسمع فيها عن البراند بتاعك، أهدافك البيعية، والتحديات اللي قدامك في السوق.
+            </p>
+          </div>
         </div>
 
-        <div class="glass-card rounded-3xl p-8 relative">
-          <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">02</div>
-          <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نقترح</h3>
-          <p class="text-white/75 text-sm leading-relaxed">
-            بنبعتلك استراتيجية مبدئية وعرض مفصل بالباقة المناسبة والأنسب لحجم شغلك وميزانيتك الاستثمارية.
-          </p>
+        <div class="package">
+          <div class="package2 relative">
+            <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">02</div>
+            <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نقترح</h3>
+            <p class="text-white/75 text-sm leading-relaxed">
+              بنبعتلك استراتيجية مبدئية وعرض مفصل بالباقة المناسبة والأنسب لحجم شغلك وميزانيتك الاستثمارية.
+            </p>
+          </div>
         </div>
 
-        <div class="glass-card rounded-3xl p-8 relative">
-          <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">03</div>
-          <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نبدأ</h3>
-          <p class="text-white/75 text-sm leading-relaxed">
-            بنتفق ونوقع، ونبدأ أول شهر فوراً بخطة محتوى واضحة ومواعيد تصوير وتسليم محددة بالأيام.
-          </p>
+        <div class="package">
+          <div class="package2 relative">
+            <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">03</div>
+            <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نبدأ</h3>
+            <p class="text-white/75 text-sm leading-relaxed">
+              بنتفق ونوقع، ونبدأ أول شهر فوراً بخطة محتوى واضحة ومواعيد تصوير وتسليم محددة بالأيام.
+            </p>
+          </div>
         </div>
       </div>
 
