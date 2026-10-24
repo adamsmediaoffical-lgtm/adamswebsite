@@ -29,7 +29,6 @@
           fontFamily: {
             sans: ['Expo Arabic', 'sans-serif'],
             expoArabic: ['Expo Arabic', 'sans-serif'],
-            cairo: ['Expo Arabic', 'sans-serif'],
             mono: ['Expo Arabic', 'sans-serif']
           },
           animation: {
@@ -85,7 +84,7 @@
       font-family: 'Expo Arabic';
       src: url('./alfont_com_AlFont_com_ExpoArabic-Bold.otf') format('opentype');
       font-style: normal;
-      font-weight: 700;
+      font-weight: 700 900;
       font-display: swap;
     }
 
@@ -94,6 +93,14 @@
       background-color: #140A28;
       color: #FAF7FD;
       overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
     }
     
     ::-webkit-scrollbar {
@@ -384,7 +391,10 @@
     }
 
     @media (max-width: 640px) {
-      #chatInput {
+      #chatInput,
+      #clientName,
+      #brandName,
+      #serviceSelect {
         font-size: 16px;
       }
     }
@@ -418,7 +428,7 @@
   </div>
 
   <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-    <div id="chatbotWindow" class="hidden mb-4 w-80 sm:w-96 rounded-2xl bg-brand-surface/95 backdrop-blur-xl border border-brand-accent/30 shadow-2xl flex-col overflow-hidden transition-all duration-300">
+    <div id="chatbotWindow" class="hidden mb-4 w-80 max-w-[calc(100vw-2rem)] sm:w-96 rounded-2xl bg-brand-surface/95 backdrop-blur-xl border border-brand-accent/30 shadow-2xl flex-col overflow-hidden transition-all duration-300">
       <div class="p-4 bg-brand-card/90 border-b border-brand-accent/20 flex items-center justify-between">
         <div class="flex items-center gap-3">
           <div class="w-9 h-9 rounded-xl bg-brand-accent/20 border border-brand-accent/40 flex items-center justify-center text-brand-accent">
@@ -894,7 +904,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch mb-12">
         
         <div class="uiverse-card">
           <div class="card__border"></div>
@@ -933,7 +943,7 @@
           <a href="https://wa.me/201007812220?text=Hello,%20I%20am%20interested%20in%20the%20Starter%20Package" target="_blank" class="button mt-auto">طلب استشارة لباقة البداية</a>
         </div>
 
-        <div class="uiverse-card scale-105 z-10 border-2 border-brand-accent">
+        <div class="uiverse-card lg:scale-105 z-10 border-2 border-brand-accent">
           <div class="absolute -top-3.5 right-1/2 translate-x-1/2 bg-gradient-to-r from-brand-accent to-brand-glow text-brand-darkest text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-md">
             الأكثر طلباً
           </div>
@@ -1131,8 +1141,8 @@
   <footer class="bg-brand-darkest border-t border-brand-accent/15 pt-16 pb-12 relative text-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        <div class="md:col-span-1 space-y-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="sm:col-span-2 lg:col-span-1 space-y-4">
           <div class="flex items-center gap-2.5">
             <div class="w-9 h-9 rounded-xl bg-brand-accent flex items-center justify-center text-brand-darkest font-black text-lg">
               a
