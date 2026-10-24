@@ -1383,17 +1383,29 @@
     });
 
     const chatbotWindow = document.getElementById('chatbotWindow');
+    const chatbotToggleBtn = document.getElementById('chatbotToggleBtn');
     function toggleChatbot() {
       const isClosed = chatbotWindow.classList.contains('hidden');
       if (isClosed) {
         chatbotWindow.classList.remove('hidden');
         chatbotWindow.classList.add('flex');
-        document.getElementById('chatInput').focus();
+        if (window.matchMedia('(min-width: 641px)').matches) {
+          document.getElementById('chatInput').focus();
+        }
       } else {
         chatbotWindow.classList.add('hidden');
         chatbotWindow.classList.remove('flex');
       }
     }
+
+    document.addEventListener('click', event => {
+      if (!chatbotWindow.classList.contains('hidden')
+          && !chatbotWindow.contains(event.target)
+          && !chatbotToggleBtn.contains(event.target)) {
+        chatbotWindow.classList.add('hidden');
+        chatbotWindow.classList.remove('flex');
+      }
+    });
 
     function appendUserMessage(text) {
       const chatMessages = document.getElementById('chatMessages');
