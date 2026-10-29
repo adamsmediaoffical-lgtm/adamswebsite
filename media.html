@@ -5,6 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>adam's media™ | Creative & Digital Solutions</title>
   
+  <meta name="description" content="الذراع الإبداعي والرقمي لمجموعة adam's agency. بنساعد البراندات تبني حضور قوي أونلاين: محتوى بيتشاف، تصوير بيبيع، وإعلانات بتجيب عملاء حقيقيين.">
+  <link rel="icon" type="image/png" href="https://i.ibb.co/j93pXSsK/ADAM-S-MEDIA-LOGO-01.png">
+
+  <!-- Open Graph / Facebook / WhatsApp / Social Media SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://adamsmedia.com/">
+  <meta property="og:title" content="adam's media™ | Creative & Digital Solutions">
+  <meta property="og:description" content="الذراع الإبداعي والرقمي لمجموعة adam's agency. محتوى بيتشاف، تصوير، وإعلانات ممولة.">
+  <meta property="og:image" content="https://i.ibb.co/j93pXSsK/ADAM-S-MEDIA-LOGO-01.png">
+
+  <!-- Twitter Card SEO -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://adamsmedia.com/">
+  <meta property="twitter:title" content="adam's media™ | Creative & Digital Solutions">
+  <meta property="twitter:description" content="الذراع الإبداعي والرقمي لمجموعة adam's agency.">
+  <meta property="twitter:image" content="https://i.ibb.co/j93pXSsK/ADAM-S-MEDIA-LOGO-01.png">
+
+  <!-- Schema.org Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DigitalMarketingAgency",
+    "name": "adam's media",
+    "alternateName": "Adam's Advertising Agency",
+    "url": "https://adamsmedia.com",
+    "logo": "https://i.ibb.co/j93pXSsK/ADAM-S-MEDIA-LOGO-01.png",
+    "image": "https://i.ibb.co/j93pXSsK/ADAM-S-MEDIA-LOGO-01.png",
+    "description": "الذراع الإبداعي والرقمي لمجموعة adam's agency. محتوى بيتشاف، تصوير، وإعلانات ممولة.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "المحلة الكبرى",
+      "addressRegion": "الغربية",
+      "addressCountry": "EG"
+    },
+    "telephone": "+201007812220",
+    "priceRange": "$$",
+    "areaServed": "Egypt",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61594620820986",
+      "https://www.instagram.com/_adamsmedia"
+    ]
+  }
+  </script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" crossorigin="anonymous">
@@ -158,6 +202,148 @@
       border-color: rgba(196, 168, 255, 0.35);
       transform: translateY(-4px);
       box-shadow: 0 16px 36px -10px rgba(157, 108, 255, 0.22);
+    }
+
+    .hero-interaction {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .hero-interaction-stage {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      min-height: 18rem;
+    }
+
+    #cursor,
+    #box,
+    #text {
+      cursor: pointer;
+    }
+
+    #cursor {
+      position: absolute;
+      z-index: 3;
+      top: 78%;
+      left: 41%;
+      width: 2rem;
+      height: 2.5rem;
+      overflow: visible;
+      transform: translate3d(300px, 0, 0) scale(1);
+      transform-origin: center center;
+      transform-box: fill-box;
+      animation: cursor 5s ease infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes cursor {
+      0% {
+        opacity: 0;
+        transform: translate3d(300px, 0, 0) scale(1);
+      }
+      30% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      60% {
+        opacity: 1;
+        transform: translate3d(-200px, -200px, 0) scale(1);
+      }
+      65% {
+        opacity: 1;
+        transform: translate3d(-200px, -200px, 0) scale(0.95);
+      }
+      70% {
+        opacity: 1;
+        transform: translate3d(-200px, -200px, 0) scale(1);
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(-300px, -50px, 0) scale(1);
+      }
+    }
+
+    #box {
+      position: absolute;
+      z-index: 2;
+      top: 12%;
+      left: 14%;
+      opacity: 0;
+      animation: box 5s ease infinite alternate;
+    }
+
+    @keyframes box {
+      0%, 60% { opacity: 0; }
+      65%, 100% { opacity: 1; }
+    }
+
+    #text {
+      pointer-events: none;
+    }
+
+    @media (max-width: 640px) {
+      .hero-interaction-stage {
+        min-height: 15rem;
+      }
+
+      #cursor {
+        top: 78%;
+        left: 52%;
+        width: 1.65rem;
+        height: 2.1rem;
+        animation-name: cursor-mobile;
+      }
+
+      @keyframes cursor-mobile {
+        0% {
+          opacity: 0;
+          transform: translate3d(180px, 0, 0) scale(1);
+        }
+        30% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+        60% {
+          opacity: 1;
+          transform: translate3d(-120px, -150px, 0) scale(1);
+        }
+        65% {
+          opacity: 1;
+          transform: translate3d(-120px, -150px, 0) scale(0.95);
+        }
+        70% {
+          opacity: 1;
+          transform: translate3d(-120px, -150px, 0) scale(1);
+        }
+        100% {
+          opacity: 1;
+          transform: translate3d(-180px, -40px, 0) scale(1);
+        }
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #cursor,
+      #box {
+        animation: none;
+      }
+
+      #cursor {
+        opacity: 1;
+        transform: translate3d(-200px, -200px, 0);
+      }
+
+      #box {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 640px) and (prefers-reduced-motion: reduce) {
+      #cursor {
+        transform: translate3d(-120px, -150px, 0);
+      }
     }
 
     #about .about-card {
@@ -1122,7 +1308,7 @@
     </div>
   </section>
 
-  <section id="process" class="py-20 relative">
+  <section class="py-20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -1138,34 +1324,28 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="package">
-          <div class="package2 relative">
-            <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">01</div>
-            <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نتقابل</h3>
-            <p class="text-white/75 text-sm leading-relaxed">
-              جلسة تعارف (أونلاين أو في مقرنا) نسمع فيها عن البراند بتاعك، أهدافك البيعية، والتحديات اللي قدامك في السوق.
-            </p>
-          </div>
+        <div class="glass-card rounded-3xl p-8 relative">
+          <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">01</div>
+          <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نتقابل</h3>
+          <p class="text-white/75 text-sm leading-relaxed">
+            جلسة تعارف (أونلاين أو في مقرنا) نسمع فيها عن البراند بتاعك، أهدافك البيعية، والتحديات اللي قدامك في السوق.
+          </p>
         </div>
 
-        <div class="package">
-          <div class="package2 relative">
-            <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">02</div>
-            <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نقترح</h3>
-            <p class="text-white/75 text-sm leading-relaxed">
-              بنبعتلك استراتيجية مبدئية وعرض مفصل بالباقة المناسبة والأنسب لحجم شغلك وميزانيتك الاستثمارية.
-            </p>
-          </div>
+        <div class="glass-card rounded-3xl p-8 relative">
+          <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">02</div>
+          <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نقترح</h3>
+          <p class="text-white/75 text-sm leading-relaxed">
+            بنبعتلك استراتيجية مبدئية وعرض مفصل بالباقة المناسبة والأنسب لحجم شغلك وميزانيتك الاستثمارية.
+          </p>
         </div>
 
-        <div class="package">
-          <div class="package2 relative">
-            <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">03</div>
-            <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نبدأ</h3>
-            <p class="text-white/75 text-sm leading-relaxed">
-              بنتفق ونوقع، ونبدأ أول شهر فوراً بخطة محتوى واضحة ومواعيد تصوير وتسليم محددة بالأيام.
-            </p>
-          </div>
+        <div class="glass-card rounded-3xl p-8 relative">
+          <div class="text-5xl font-black text-brand-accent/20 mb-4 font-expoArabic">03</div>
+          <h3 class="text-2xl font-bold text-white mb-2 font-expoArabic">نبدأ</h3>
+          <p class="text-white/75 text-sm leading-relaxed">
+            بنتفق ونوقع، ونبدأ أول شهر فوراً بخطة محتوى واضحة ومواعيد تصوير وتسليم محددة بالأيام.
+          </p>
         </div>
       </div>
 
